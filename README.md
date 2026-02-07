@@ -79,7 +79,6 @@ See [`docker-compose.yml`](docker-compose.yml) for the complete configuration.
 ```bash
 docker-compose up -d
 ```
-```
 
 **Attack Analysis**
 
