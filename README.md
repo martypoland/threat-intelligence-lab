@@ -93,7 +93,19 @@ See detailed analysis in [Attack Report](findings/attack-report.md)
 
 ## Malware Samples
 
-[Details about captured malware - we can document the SSH key backdoor and any other samples]
+The honeypot captured **11 malware samples** including:
+
+- **Cryptocurrency mining trojan** (29MB, 44/65 detection rate on VirusTotal)
+- **Mirai botnet variants** across 5 different CPU architectures (x86, x86-64, ARM, ARM64)
+- **Installation scripts** demonstrating evasion techniques and competitor removal
+- **SSH backdoor keys** for persistent access
+
+**Key Findings:**
+- Multi-architecture deployment indicates targeting of IoT devices and embedded systems
+- Botnet warfare observed: malware actively removes competing infections
+- Failed C2 communication to `23.160.56.192` suggests disrupted infrastructure
+
+See detailed analysis in [Malware Analysis Report](findings/malware-analysis.md)
 
 ## Skills Demonstrated
 
