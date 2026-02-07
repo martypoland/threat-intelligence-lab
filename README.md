@@ -48,12 +48,22 @@ cd loki/
 docker-compose up -d
 ```
 
-4. **Configure VirusTotal monitoring** *(Coming Soon)*
+4. **Configure VirusTotal monitoring**
 ```bash
 cd virustotal/
-# Add your VirusTotal API key to config
-python3 vt_monitor.py
+
+# Edit the script and add your credentials
+nano vt_monitor.py
+# Set: VT_API_KEY, EMAIL_FROM, EMAIL_PASSWORD, EMAIL_TO
+
+# Make executable
+chmod +x vt_monitor.py
+
+# Run in background for continuous monitoring
+sudo nohup python3 vt_monitor.py > vt_monitor.log 2>&1 &
 ```
+
+See [`virustotal/README.md`](virustotal/README.md) for detailed setup instructions.
 
 ### Security Hardening
 
@@ -159,8 +169,8 @@ See detailed analysis in [Malware Analysis Report](findings/malware-analysis.md)
 ## Future Enhancements
 
 - [ ] Geographic attack visualization
-- [ ] Automated alerting for malware detection
-- [ ] Integration with additional threat intel feeds
+- [x] Automated alerting for malware detection *(Completed - email alerts via VirusTotal integration)*
+- [x] Integration with additional threat intel feeds *(Completed - VirusTotal API)*
 - [ ] Machine learning for attack pattern recognition
 
 ## License
