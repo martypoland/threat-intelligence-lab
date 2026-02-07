@@ -80,6 +80,45 @@ See [`docker-compose.yml`](docker-compose.yml) for the complete configuration.
 docker-compose up -d
 ```
 
+### Log Analysis with Loki/Grafana
+
+**Architecture:**
+- **Loki** - Log aggregation and storage
+- **Promtail** - Log shipping from Cowrie to Loki
+- **Grafana** - Visualization and dashboard interface
+
+**Configuration Files:**
+- [`loki/docker-compose.yml`](loki/docker-compose.yml) - Complete stack deployment
+- [`loki/loki-config.yml`](loki/loki-config.yml) - Loki server configuration
+- [`loki/promtail-config.yml`](loki/promtail-config.yml) - Log parsing and shipping
+
+**Deployment:**
+```bash
+cd loki/
+docker-compose up -d
+```
+
+**Access Grafana:**
+```bash
+# Via SSH tunnel (firewall blocks direct access)
+ssh -L 3000:localhost:3000 -p YOUR_SSH_PORT user@YOUR_SERVER_IP
+```
+
+Then access at `http://localhost:3000` (default credentials: admin/admin)
+
+**Dashboard Visualizations:**
+
+![Grafana Dashboard Overview](screenshots/grafana-dashboard-overview.png)
+
+The dashboard provides real-time analysis of:
+- Attack volume over time showing peak activity periods
+- Event type distribution (logins, commands, file downloads)
+- Most targeted usernames and credentials
+- Top attack source IP addresses
+- Commands executed by attackers
+
+See additional screenshots in [`screenshots/`](screenshots/) folder.
+
 **Attack Analysis**
 
 This honeypot captured 18,974 attack events from 129 unique IP addresses over [X] days, with 11 malware samples downloaded.
