@@ -81,9 +81,16 @@ docker-compose up -d
 ```
 ```
 
-## Attack Analysis
+**Attack Analysis**
 
-[Your findings from attack data - we'll fill this in once you have more data and Grafana screenshots]
+This honeypot captured 18,974 attack events from 129 unique IP addresses over [X] days, with 11 malware samples downloaded.
+
+**Key Findings:**
+- 50% of attacks targeted root account
+- Coordinated botnet activity using paired credentials
+- SSH backdoor installation attempts observed
+
+See detailed analysis in [Attack Report](findings/attack-report.md)
 
 ## Malware Samples
 
