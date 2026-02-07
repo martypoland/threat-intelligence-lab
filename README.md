@@ -38,16 +38,17 @@ cd threat-intelligence-lab
 
 2. **Deploy Cowrie honeypot**
 ```bash
+# From the repository root
 docker-compose up -d
 ```
 
-3. **Deploy Loki/Grafana stack** (optional)
+3. **Deploy Loki/Grafana stack**
 ```bash
 cd loki/
 docker-compose up -d
 ```
 
-4. **Configure VirusTotal monitoring** (optional)
+4. **Configure VirusTotal monitoring** *(Coming Soon)*
 ```bash
 cd virustotal/
 # Add your VirusTotal API key to config
@@ -61,8 +62,6 @@ Before exposing the honeypot to the internet:
 - Disable root login and password authentication
 - Configure UFW firewall to restrict management access
 - Only expose port 22 (honeypot) to public internet
-
-See detailed setup guide in [SETUP.md](SETUP.md) (optional - for very detailed instructions)
 
 ### Cowrie Honeypot Setup
 
@@ -119,9 +118,9 @@ The dashboard provides real-time analysis of:
 
 See additional screenshots in [`screenshots/`](screenshots/) folder.
 
-**Attack Analysis**
+## Attack Analysis
 
-This honeypot captured 18,974 attack events from 129 unique IP addresses over [X] days, with 11 malware samples downloaded.
+This honeypot captured **18,974 attack events** from **129 unique IP addresses** over 3 days, with 11 malware samples downloaded.
 
 **Key Findings:**
 - 50% of attacks targeted root account
