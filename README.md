@@ -23,6 +23,47 @@ This project demonstrates end-to-end threat detection and malware analysis capab
 
 ## Deployment
 
+### Prerequisites
+- Ubuntu 24.04 LTS server
+- Docker and Docker Compose installed
+- Minimum 4GB RAM recommended
+
+### Quick Start
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/YOUR_USERNAME/threat-intelligence-lab.git
+cd threat-intelligence-lab
+```
+
+2. **Deploy Cowrie honeypot**
+```bash
+docker-compose up -d
+```
+
+3. **Deploy Loki/Grafana stack** (optional)
+```bash
+cd loki/
+docker-compose up -d
+```
+
+4. **Configure VirusTotal monitoring** (optional)
+```bash
+cd virustotal/
+# Add your VirusTotal API key to config
+python3 vt_monitor.py
+```
+
+### Security Hardening
+
+Before exposing the honeypot to the internet:
+- Move SSH to a non-standard high port (e.g., 52847)
+- Disable root login and password authentication
+- Configure UFW firewall to restrict management access
+- Only expose port 22 (honeypot) to public internet
+
+See detailed setup guide in [SETUP.md](SETUP.md) (optional - for very detailed instructions)
+
 ### Infrastructure
 - Platform: DigitalOcean VPS (4GB RAM, 2 vCPU)
 - OS: Ubuntu 24.04 LTS
@@ -30,7 +71,20 @@ This project demonstrates end-to-end threat detection and malware analysis capab
 
 ### Cowrie Honeypot Setup
 
-[Configuration details will go here]
+**Docker Compose Configuration:**
+
+See [`docker-compose.yml`](docker-compose.yml) for the complete configuration.
+
+**Key Configuration:**
+- Honeypot exposed on port 22 (standard SSH port for maximum attack exposure)
+- Persistent volumes for configuration and log data
+- Automatic restart on failure for continuous operation
+
+**Deployment:**
+```bash
+docker-compose up -d
+```
+```
 
 ## Attack Analysis
 
