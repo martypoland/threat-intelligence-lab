@@ -151,7 +151,7 @@ The honeypot captured **11 malware samples** including:
 **Key Findings:**
 - Multi-architecture deployment indicates targeting of IoT devices and embedded systems
 - Botnet warfare observed: malware actively removes competing infections
-- Failed C2 communication to `23.160.56.192` suggests disrupted infrastructure
+- Failed C2 communication to `XXX.XXX.XXX.XXX` suggests disrupted infrastructure
 
 See detailed analysis in [Malware Analysis Report](findings/malware-analysis.md)
 
