@@ -1,0 +1,19 @@
+# VirusTotal Monitor Configuration
+
+# VirusTotal API Key
+# Get your free API key at: https://www.virustotal.com/gui/join-us
+VT_API_KEY=your_virustotal_api_key_here
+
+# Cowrie Downloads Path
+COWRIE_DOWNLOADS=/var/lib/docker/volumes/cowrie-honeypot_cowrie-var/_data/lib/cowrie/downloads
+
+# Email Alert Configuration
+ENABLE_EMAIL=true
+SMTP_SERVER=smtp.gmail.com
+SMTP_PORT=587
+EMAIL_FROM=your-email@gmail.com
+EMAIL_PASSWORD=your-gmail-app-password
+EMAIL_TO=your-email@gmail.com
+
+# Check interval in seconds (default: 300 = 5 minutes)
+CHECK_INTERVAL=300
