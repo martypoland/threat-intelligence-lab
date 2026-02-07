@@ -32,7 +32,7 @@ This project demonstrates end-to-end threat detection and malware analysis capab
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/YOUR_USERNAME/threat-intelligence-lab.git
+git clone https://github.com/martypoland/threat-intelligence-lab.git
 cd threat-intelligence-lab
 ```
 
@@ -63,11 +63,6 @@ Before exposing the honeypot to the internet:
 - Only expose port 22 (honeypot) to public internet
 
 See detailed setup guide in [SETUP.md](SETUP.md) (optional - for very detailed instructions)
-
-### Infrastructure
-- Platform: DigitalOcean VPS (4GB RAM, 2 vCPU)
-- OS: Ubuntu 24.04 LTS
-- Containerization: Docker & Docker Compose
 
 ### Cowrie Honeypot Setup
 
