@@ -93,7 +93,9 @@ File Hash: 94f2e4d8d4436874785cd14e6e6d403507b8750852f7f2040352069a75da4c00
 Detection Rate: 44/76
 VirusTotal Link: https://www.virustotal.com/gui/file/94f2e4d8...
 ```
-[Malware Email Alert](../screenshots/malware-email-alert.png)
+
+![Malware Email Alert](../screenshots/malware-email-alert.png)
+
 
 ## API Rate Limits
 
