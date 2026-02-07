@@ -1,6 +1,6 @@
 ## Attack Analysis
 
-### Summary Statistics (As of [DATE])
+### Summary Statistics (As of 7th February 2026)
 
 - **Total Attack Events:** 18,974
 - **Unique Source IPs:** 129 different attackers
