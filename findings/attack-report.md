@@ -5,7 +5,7 @@
 - **Total Attack Events:** 18,974
 - **Unique Source IPs:** 129 different attackers
 - **Malware Samples Captured:** 11 unique files
-- **Attack Duration:** [X days] of continuous monitoring
+- **Attack Duration:** 3 days of continuous monitoring
 
 ### Attack Patterns
 
